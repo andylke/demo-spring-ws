@@ -1,0 +1,177 @@
+{
+  "info": {
+    "_postman_id": "72c1acdd-9c5d-4988-b2be-3652662a674b",
+    "name": "demo-spring-ws",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "12960460"
+  },
+  "item": [
+    {
+      "name": "GetCountryRequest",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n\t\t\t\t  xmlns:gs=\"http://github.com/andylke/demo-spring-ws\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <gs:getCountryRequest>\r\n            <gs:name>Ireland</gs:name>\r\n        </gs:getCountryRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/ws",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ws"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "200 - Spain",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n\t\t\t\t  xmlns:gs=\"http://github.com/andylke/demo-spring-ws\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <gs:getCountryRequest>\r\n            <gs:name>Spain</gs:name>\r\n        </gs:getCountryRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/ws",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ws"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "xml",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2"
+            },
+            {
+              "key": "SOAPAction",
+              "value": "\"\""
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/xml;charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "408"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 04 May 2024 13:47:21 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <SOAP-ENV:Header/>\n    <SOAP-ENV:Body>\n        <ns2:getCountryResponse xmlns:ns2=\"http://github.com/andylke/demo-spring-ws\">\n            <ns2:country>\n                <ns2:name>Spain</ns2:name>\n                <ns2:population>46704314</ns2:population>\n                <ns2:capital>Madrid</ns2:capital>\n                <ns2:currency>EUR</ns2:currency>\n            </ns2:country>\n        </ns2:getCountryResponse>\n    </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        },
+        {
+          "name": "500 - Ireland",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n\t\t\t\t  xmlns:gs=\"http://github.com/andylke/demo-spring-ws\">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <gs:getCountryRequest>\r\n            <gs:name>Ireland</gs:name>\r\n        </gs:getCountryRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/ws",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ws"
+              ]
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "_postman_previewlanguage": "xml",
+          "header": [
+            {
+              "key": "Accept",
+              "value": "text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2"
+            },
+            {
+              "key": "SOAPAction",
+              "value": "\"\""
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/xml;charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "277"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 04 May 2024 13:48:24 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <SOAP-ENV:Header/>\n    <SOAP-ENV:Body>\n        <SOAP-ENV:Fault>\n            <faultcode>SOAP-ENV:Server</faultcode>\n            <faultstring xml:lang=\"en\">Country not found.</faultstring>\n        </SOAP-ENV:Fault>\n    </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
+        }
+      ]
+    }
+  ]
+}
