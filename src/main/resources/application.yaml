@@ -1,0 +1,5 @@
+logging:
+  level:
+    org.springframework.ws.soap.server.SoapMessageDispatcher: DEBUG
+    org.springframework.ws.server.MessageTracing.sent: TRACE
+
